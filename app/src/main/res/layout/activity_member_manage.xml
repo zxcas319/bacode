@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+
+        android:id="@+id/ScrollView1"
+        android:layout_width="401dp"
+        android:layout_height="738dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+
+
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="사용자 관리"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20dp"></TextView>
+
+            <Button
+                android:id="@+id/logout"
+                 android:layout_marginLeft="150dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:text="로그아웃"
+                android:textColor="#ffffff"></Button>
+
+            <EditText
+
+                android:id="@+id/edit_id"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="40"
+                android:hint="이메일주소"
+                android:inputType="textPersonName"
+                android:maxLength="40"
+
+                />
+
+
+            <EditText
+                android:id="@+id/edit_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/edit_id"
+                android:ems="40"
+                android:hint="비밀번호"
+                android:inputType="textPersonName"
+
+
+                android:maxLength="40" />
+
+            <View
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="2dip"
+
+
+                android:layout_marginTop="20dp"
+                android:background="#AAAAAA" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_insert"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/edit_age"
+                    android:layout_alignEnd="@+id/scroll_view"
+                    android:layout_marginRight="20dp"
+
+                    android:background="@drawable/selector_view_blue"
+                    android:text="사용자 추가"
+                    android:textColor="#ffffff" />
+
+                <Button
+                    android:id="@+id/btn_update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignStart="@+id/btn_insert"
+
+                    android:background="@drawable/selector_view_gray"
+                    android:text="사용자 수정"
+                    android:textColor="#ffffff" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line3"
+                android:layout_width="match_parent"
+                android:layout_height="2dip"
+
+                android:layout_marginBottom="20dp"
+                android:background="#AAAAAA" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <CheckBox
+                    android:id="@+id/check_userid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/text_sort"
+                    android:layout_alignBottom="@+id/text_sort"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toRightOf="@+id/text_sort"
+                    android:text="이메일"
+                    android:textSize="15dp" />
+
+
+                <CheckBox
+                    android:id="@+id/check_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/text_sort"
+                    android:layout_alignBottom="@+id/text_sort"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_toRightOf="@+id/check_userid"
+                    android:text="비밀번호"
+                    android:textSize="15dp" />
+
+
+                <Button
+                    android:id="@+id/btn_select"
+                    android:layout_width="174dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/check_age"
+                    android:layout_alignStart="@+id/btn_update"
+                    android:layout_alignBottom="@+id/check_age"
+                    android:background="@drawable/selector_view_blue"
+                    android:text="사용자 조회"
+                    android:textColor="#ffffff" />
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line4"
+                android:layout_width="match_parent"
+                android:layout_height="2dip"
+
+
+                android:layout_marginTop="20dp"
+                android:background="#AAAAAA" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ListView
+                    android:id="@+id/db_list_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:choiceMode="singleChoice"></ListView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</RelativeLayout>
